@@ -4,10 +4,6 @@ title: API Reference
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
 
-toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='https://github.com/lord/slate'>Documentation Powered by Slate</a>
-
 includes:
   - anexos
 
@@ -34,7 +30,7 @@ curl "https://sandboxintegracion.chazki.com:8443/chazkiServices/delivery/create/
 
 > Reemplazar `YOUR_CHAZKI_API_KEY` por su API key.
 
-Empleamos un Key para brindar acceso a nuestro API. Puede solicitar su Chazki API Key en nuestro [developer portal](http://example.com/developers).
+Empleamos un Key para brindar acceso a nuestro API.
 
 Nuestro API espera que el Chazki API Key sea incluído en el header de cada petición al servidor, como se muestra a continuación:
 
