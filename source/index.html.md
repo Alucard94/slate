@@ -10,7 +10,7 @@ includes:
 search: true
 ---
 
-# Introduction
+# Introducción
 
 Para poder realizar los pedidos de los servicios de Chazki se habilitaron endpoints para el registro del delivery y la consulta del estado de los pedidos.
 
@@ -18,7 +18,7 @@ Estos servicios se encuentran registrados en el dominio propiedad de chazki y se
 
 Encuentra más acerca de Chazki [aquí](https://www.chazki.com/#/). Vea también nuestros [Términos y condiciones](https://pe.chazki.com/tyc.html).
 
-# Authentication
+# Autenticación
 
 > Usar el siguiente código para la autenticación:
 
@@ -40,7 +40,7 @@ Nuestro API espera que el Chazki API Key sea incluído en el header de cada peti
 Se debe reemplazar <code>YOUR_CHAZKI_API_KEY</code> por el Key que se le asignó.
 </aside>
 
-# Services
+# Servicios
 
 ## Registro de un Delivery
 
@@ -118,8 +118,8 @@ Este endpoint permite registrar un delivery o ruta. Dado que en el envío es un 
 
 ### Estructura de envío
 
-Attribute | Type | Description | Provider | Required
---------- | ---- | ----------- | -------- | --------
+Atributo | Tipo | Descripción | Proveedor | Obligatorio
+-------- | ---- | ----------- | --------- | -----------
 storeId | String | Campo referido a la tienda | Chazki | SI
 branchId | String | Lugar o Sucursal desde donde se origina el pedido | Chazki | SI
 deliveryTrackCode | String | Código que identifica el pedido, este código debe ser único | Cliente | SI
@@ -160,8 +160,8 @@ longitude | Double | Longitud, en caso de ser desconocida colocar 0 | Cliente | 
 
 ### Estructura de respuesta del API
 
-Attribute | Type | Description | Provider 
---------- | ---- | ----------- | -------- 
+Atributo | Tipo | Descripción | Proveedor 
+-------- | ---- | ----------- | --------- 
 response | Integer | Código de respuesta (0: no se pudo efectuar, 1: se registró correctamente)<br><ul><li><b>0:</b> Error a nivel funcional, ejemplo: "Datos incorrectos en la trama"</li><li><b>1: </b> Éxito</li><li><b>99: </b> Error técnico, puede ser considerado como caída del servidor</li></ul> | Chazki
 descriptionResponse | String | Descripción de la respuesta<br><ul><li><b>0:</b> "FAILED"</li><li><b>1: </b> "SUCCESS"</li><li><b>99: </b> "ERROR: faltan parámetros, NullpointerException"</li></ul> | Chazki
 codeDelivery | String | Código Track del delivery. Si es un conjunto de deliveries retornará separado por coma (",") | Chazki
@@ -197,15 +197,15 @@ Esta API nos permite ver el movimiento del Chazki y el estado en que se encuentr
 
 ### URL Parameters
 
-Parameter | Description | Type | Provider | Required
---------- | ----------- | ---- | -------- | --------
+Parámetro | Descripción | Tipo | Proveedor | Obligatorio
+--------- | ----------- | ---- | --------- | -----------
 code | Código track del delivery | String | Cliente | SI
 store | Código de la empresa | String | Cliente | SI
 
 ### Resultado
 
-Attribute | Description | Type | Provider
---------- | ----------- | ---- | --------
+Atributo | Descripción | Tipo | Proveedor
+-------- | ----------- | ---- | ---------
 position | Retorna los puntos de latitud y longitu | String | Chazki
 status | Estado en que se encuentra el delivery | String | Chazki
 timestamp | Fecha de la última actualización de la posición del Chazki | String | Chazki
@@ -270,15 +270,15 @@ Esta API nos permite ver los estados por los que paso el delivery agrupados por 
 
 ### URL Parameters
 
-Parameter | Description | Type | Provider | Required
---------- | ----------- | ---- | -------- | --------
+Parámetro | Descripción | Tipo | Proveedor | Obligatorio
+--------- | ----------- | ---- | --------- | -----------
 code | Código track del delivery | String | Cliente | SI
 store | Código de la empresa | String | Cliente | SI
 
 ### Resultado
 
-Attribute | Description | Type | Provider
---------- | ----------- | ---- | --------
+Atributo | Descripción | Tipo | Proveedor
+-------- | ----------- | ---- | ---------
 response | Respuesta de la petición (0: Error, 1: OK, 99: ERROR) | Integer | Chazki
 descriptionResponse | Descripción breve del código de error | String | Chazki
 message | Mensaje de respuesta si es que el valor de "response" es 0 o 99 | String | Chazki
@@ -379,8 +379,8 @@ Esta API nos permite poder realizar logística inversa en caso se necesite recog
 
 ### Estructura de envío
 
-Attribute | Type | Description | Provider | Required
---------- | ---- | ----------- | -------- | --------
+Atributo | Tipo | Descripción | Proveedor | Obligatorio
+-------- | ---- | ----------- | --------- | -----------
 storeId | String | Campo referido a la tienda | Chazki | SI
 branchId | String | Lugar o Sucursal desde donde se origina el pedido | Chazki | SI
 deliveryTrackCode | String | Código que identifica el pedido, este código debe ser único | Cliente | SI
@@ -434,8 +434,8 @@ longitude | Double | Longitud, en caso de ser desconocida colocar 0 | Cliente | 
 
 ### Estructura de respuesta del API
 
-Attribute | Type | Description | Provider 
---------- | ---- | ----------- | -------- 
+Atributo | Tipo | Descripción | Proveedor 
+-------- | ---- | ----------- | --------- 
 response | Integer | Código de respuesta (0: no se pudo efectuar, 1: se registró correctamente)<br><ul><li><b>0:</b> Error a nivel funcional, ejemplo: "Datos incorrectos en la trama"</li><li><b>1: </b> Éxito</li><li><b>99: </b> Error técnico, puede ser considerado como caída del servidor</li></ul> | Chazki
 descriptionResponse | String | Descripción de la respuesta<br><ul><li><b>0:</b> "FAILED"</li><li><b>1: </b> "SUCCESS"</li><li><b>99: </b> "ERROR: faltan parámetros, NullpointerException"</li></ul> | Chazki
 codeDelivery | String | Código Track del delivery. Si es un conjunto de deliveries retornará separado por coma (",") | Chazki
@@ -518,8 +518,8 @@ En este caso, el formato del campo <b>time</b> es de la forma "<b>dd/MM/YY NN-NN
 
 ### Estructura de envío
 
-Attribute | Type | Description | Provider | Required
---------- | ---- | ----------- | -------- | --------
+Atributo | Tipo | Descripción | Proveedor | Obligatorio
+-------- | ---- | ----------- | --------- | -----------
 storeId | String | Campo referido a la tienda | Chazki | SI
 branchId | String | Lugar o Sucursal desde donde se origina el pedido | Chazki | SI
 deliveryTrackCode | String | Código que identifica el pedido, este código debe ser único | Cliente | SI
@@ -560,8 +560,8 @@ longitude | Double | Longitud, en caso de ser desconocida colocar 0 | Cliente | 
 
 ### Estructura de respuesta del API
 
-Attribute | Type | Description | Provider 
---------- | ---- | ----------- | -------- 
+Atributo | Tipo | Descripción | Proveedor 
+-------- | ---- | ----------- | --------- 
 response | Integer | Código de respuesta (0: no se pudo efectuar, 1: se registró correctamente)<br><ul><li><b>0:</b> Error a nivel funcional, ejemplo: "Datos incorrectos en la trama"</li><li><b>1: </b> Éxito</li><li><b>99: </b> Error técnico, puede ser considerado como caída del servidor</li></ul> | Chazki
 descriptionResponse | String | Descripción de la respuesta<br><ul><li><b>0:</b> "FAILED"</li><li><b>1: </b> "SUCCESS"</li><li><b>99: </b> "ERROR: faltan parámetros, NullpointerException"</li></ul> | Chazki
 codeDelivery | String | Código Track del delivery. Si es un conjunto de deliveries retornará separado por coma (",") | Chazki
